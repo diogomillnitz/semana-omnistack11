@@ -75,13 +75,14 @@ export default function Login(props){
                         autoComplete: "off"
                       }}
                     />
-                    <a href ="/register">
-                    <FiLogIn size={16} color= ""/>
+                    
+                    
+                  </CardBody>
+                  <a href ="/register">
+                    <FiLogIn size={16} color= "#616161"/>
                     teste
 
                     </a>
-                    
-                  </CardBody>
                   <CardFooter className={classes.cardFooter}>
                     <Button simple color="primary" size="lg">
                       entrar
