@@ -4,3 +4,21 @@
     max-width:40%;
 	height:auto;
 }
+
+.cadastro {
+    display: flex;
+    text-decoration: none;
+    color: #41414d;
+    margin-top: 10px;
+    position: relative;
+    align-items: center;
+    text-align: center;
+    font-size: 12px;
+
+    top: 50%;
+    left: 30%;
+}
+
+.cadastro svg {
+    margin-right: 8px;
+}

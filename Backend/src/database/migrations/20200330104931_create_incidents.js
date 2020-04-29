@@ -1,14 +1,15 @@
 
 exports.up = function(knex) {
-    return knex.schema.createTable('incidents', function(table){
+    return knex.schema.createTable('users', function(table){
         table.increments(); 
-        table.string('title').notNullable();
-        table.string('description').notNullable();
-        table.decimal('value').notNullable();
-        
-        table.string('ong_id').notNullable();
-
-        table.foreign('ong_id').references('id').inTable('ongs');
+        table.string('id').primary();
+        table.string('name').notNullable();
+        table.string('matricula').notNullable();
+        table.string('email').notNullable();
+        table.decimal('ramal').notNullable();
+        table.string('area').notNullable();
+        table.string('funcao').notNullable();
+        table.string('senha').notNullable();
     });
 };
 

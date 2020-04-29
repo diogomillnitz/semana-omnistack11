@@ -34,7 +34,7 @@ export default function Login(props){
   return (
         <div className={classes.container}>
           <GridContainer justify="center">
-            <GridItem xs={12} sm={12} md={6}>
+            <GridItem xs={12} sm={12} md={5}>
               <Card className={classes[cardAnimaton]}>
                 <form className={classes.form}>
                   <CardHeader color="primary" className={classes.cardHeader}>
@@ -75,14 +75,13 @@ export default function Login(props){
                         autoComplete: "off"
                       }}
                     />
-                    
+                    <a href ="/register" className="cadastro">
+                    <FiLogIn size={14} color= "#616161"/>
+                    Não tenho cadastro
+                    </a>
                     
                   </CardBody>
-                  <a href ="/register">
-                    <FiLogIn size={16} color= "#616161"/>
-                    teste
-
-                    </a>
+                  
                   <CardFooter className={classes.cardFooter}>
                     <Button simple color="primary" size="lg">
                       entrar
