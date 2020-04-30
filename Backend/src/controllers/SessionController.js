@@ -3,12 +3,15 @@ const connection = require('../database/connection'); // acesso ao banco de dado
 module.exports = {
 
     async create(request,response) {
-        const { id } = request.body;
+        const {email,senha} = request.body;
 
         const ong = await connection('ongs')
-        .where('id', id)
-        .select('name')
-        .first();
+        .where('email', email)
+        .select('email');
+        
+        if(incident.ong_id != ong_id){
+            return response.status(401).json({ error: 'Operation not permitted.'});
+        }
 
         if(!ong){
             return response.status(400).json({error: 'No ONG found with this ID'});

@@ -10,6 +10,7 @@ exports.up = function(knex) {
         table.string('area').notNullable();
         table.string('funcao').notNullable();
         table.string('senha').notNullable();
+        // perm adm e inserção
     });
 };
 

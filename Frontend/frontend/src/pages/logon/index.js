@@ -1,9 +1,11 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './styles.css';
 
 import { makeStyles } from "@material-ui/core/styles";
 import { FiLogIn} from 'react-icons/fi';
 import InputAdornment from "@material-ui/core/InputAdornment";
+
+import api from '../../services/api'
 
 // @material-ui/icons
 import Email from "@material-ui/icons/Email";
@@ -24,7 +26,22 @@ import styles from "../../assets/jss/material-kit-react/views/loginPage.js";
 import image from "../../assets/img/pms.png";
 const useStyles = makeStyles(styles);
 
+
 export default function Login(props){
+
+  const [email,setEmail]= useState('');
+  const [senha,setSenha]= useState('');
+
+  function handleLogin() {
+
+    try{
+
+    }catch{
+      
+    }
+
+  }
+
   const [cardAnimaton, setCardAnimation] = React.useState("cardHidden");
   setTimeout(function() {
     setCardAnimation("");
@@ -47,10 +64,12 @@ export default function Login(props){
                     <CustomInput
                       labelText="Email"
                       id="email"
+                      value={email}
                       formControlProps={{
                         fullWidth: true
                       }}
                       inputProps={{
+                        onChange: e => setEmail(e.target.value),
                         type: "email",
                         endAdornment: (
                           <InputAdornment position="end">
@@ -62,10 +81,12 @@ export default function Login(props){
                     <CustomInput
                       labelText="Senha"
                       id="password"
+                      value={senha}
                       formControlProps={{
                         fullWidth: true
                       }}
                       inputProps={{
+                        onChange: e => setSenha(e.target.value),
                         type: "Lock",
                         endAdornment: (
                           <InputAdornment position="end">
@@ -83,7 +104,7 @@ export default function Login(props){
                   </CardBody>
                   
                   <CardFooter className={classes.cardFooter}>
-                    <Button simple color="primary" size="lg">
+                    <Button simple color="primary" size="lg" onClick={handleLogin}>
                       entrar
                     </Button>
                   </CardFooter>
