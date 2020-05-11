@@ -32,10 +32,10 @@ export default function Login(props){
   const [email,setEmail]= useState('');
   const [senha,setSenha]= useState('');
 
-  function handleLogin() {
+  async function handleLogin() {
 
     try{
-
+      bcrypt.compareSync("B4c0/\/", hash);
     }catch{
       
     }

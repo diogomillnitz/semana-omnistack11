@@ -48,30 +48,20 @@ export default function LoginPage(props) {
   
   async function handleRegister(e) {
     e.preventDefault();
-
-
-    const data= {
-      nome, 
-      matricula,
-      email,
-      ramal,
-      area,
-      funcao,
-      senha,
-    };
-
+    
     if(nome !== '' || matricula !== '' || email !== '' || ramal !== '' || area !== '' || funcao !== ''){
       if(senha === confirmSenha){
-      //  var salt = bcrypt.genSaltSync(10);
-       // var hash = bcrypt.hashSync(senha, salt);
-      //  console.log(hash,data);
+        const salt = bcrypt.genSaltSync(10);
+        const hash = bcrypt.hashSync(senha, salt);
+        //console.log(hash);
       
         try{
-          api.post('/register', {data});
-        //  alert(`${hash}`);
+          
+          await api.post('/register', {nome,matricula,email,ramal,area,funcao,hash});
+         alert(`${hash}`)
           alert('Seu cadastro foi realizado com sucesso!');
           history.push('/');
-          
+         // bcrypt.compareSync(senha, hash);
         }
          catch{
           alert('Erro no cadastro, tente novamente!');
@@ -102,7 +92,7 @@ export default function LoginPage(props) {
           <GridContainer justify="center">
             <GridItem xs={10} sm={12} md={6}>
               <Card className={classes[cardAnimaton]}>
-                <form className={classes.form} onSubmit={handleRegister}> 
+                <form className={classes.form}> 
                   <CardHeader color="primary" className={classes.cardHeader}>
                    <img className="imagem" src={image}/>
                   </CardHeader>

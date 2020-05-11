@@ -11,7 +11,8 @@ module.exports = {
     },
 
     async create(request,response){
-    const {nome, 
+    const {
+        nome, 
         matricula,
         email,
         ramal,
@@ -28,7 +29,7 @@ module.exports = {
       ramal,
       area,
       funcao,
-      hash,
+      hash
     })
 
     return response.status(200).send();
