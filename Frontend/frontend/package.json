@@ -13,7 +13,7 @@
     "chartist": "^0.10.1",
     "classnames": "^2.2.6",
     "node-pre-gyp": "^0.14.0",
-    "node-sass": "^4.14.1",
+    "node-sass": "^7.0.0",
     "react": "^16.13.1",
     "react-bootstrap": "^0.32.4",
     "react-chartist": "^0.13.3",
