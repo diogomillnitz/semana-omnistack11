@@ -9,7 +9,7 @@
     "axios": "^0.19.2",
     "bcrypt": "^4.0.1",
     "bcryptjs": "^2.4.3",
-    "bootstrap": "^3.3.7",
+    "bootstrap": "^3.4.1",
     "chartist": "^0.10.1",
     "classnames": "^2.2.6",
     "node-pre-gyp": "^0.14.0",
